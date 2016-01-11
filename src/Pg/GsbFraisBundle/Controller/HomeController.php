@@ -32,7 +32,15 @@ class HomeController extends Controller
 		else {
 		    $session->set('id',$visiteur['id']);
 		    $session->set('nom',$visiteur['nom']);
-		    $session->set('prenom',$visiteur[prenom]);
-		    return $this->render('PgGsbFraisBundle::accueil.html.twig');
-	}}}
+		    $session->set('prenom',$visiteur['prenom']);
+		    return $this->render('PgGsbFraisBundle:Home:accueil.html.twig');
+	}}
+
+	public function deconnexionAction(){
+		$session= $this->get('request')->getSession();
+		$session->clear();
+		return $this->render('PgGsbFraisBundle:Home:connexion.html.twig');
+}
+
+}
 ?>

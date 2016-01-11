@@ -4,7 +4,23 @@ pg_gsb_frais_home:
 
 pg_gsb_frais_validerconnexion:
     pattern: /validerconnexion
-    defaults: { _controller: PgGsbFraisBundle:Home:validerconnexion}
+    defaults: { _controller: PgGsbFraisBundle:Home:validerconnexion }
 pg_gsb_frais_deconnexion:
     pattern: /deconnexion
     defaults: { _controller: PgGsbFraisBundle:Home:deconnexion }
+pg_gsb_listefrais:
+    path:     /listefrais
+    defaults: { _controller: PgGsbFraisBundle:ListeFrais:index }
+
+pg_gsb_saisirfrais:
+    path:     /saisirfrais
+    defaults: { _controller: PgGsbFraisBundle:SaisirFrais:index }
+
+pg_gsb_validerfraishorsforfait:
+    path:     /validerfraishorsforfait
+    defaults: { _controller: PgGsbFraisBundle:SaisirFrais:validerfraishorsforfait }
+
+pg_gsb_supprimerfraishorsforfait:
+    path:     /supprimerfraishorsforfait/{id}
+    defaults: { _controller: PgGsbFraisBundle:SaisirFrais:supprimerfraishorsforfait }
+

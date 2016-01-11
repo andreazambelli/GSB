@@ -12,6 +12,7 @@
  */
 function estConnecte(){
   return isset($_SESSION['idVisiteur']);
+ 
 }
 /**
  * Enregistre dans une variable session les infos d'un visiteur
@@ -19,11 +20,13 @@ function estConnecte(){
  * @param $id 
  * @param $nom
  * @param $prenom
+ * @param $immat
  */
-function connecter($id,$nom,$prenom){
+function connecter($id,$nom,$prenom,$immat){
 	$_SESSION['idVisiteur']= $id; 
 	$_SESSION['nom']= $nom;
 	$_SESSION['prenom']= $prenom;
+	$_SESSION['immat']= $immat;
 }
 /**
  * Détruit la session active
